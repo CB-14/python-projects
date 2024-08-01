@@ -1,0 +1,54 @@
+import random
+
+# import random
+
+def rockPaperScissors(user_input, computer_input):
+    if((user_input == "rock") & (computer_input == "rock")):
+        print("The computer threw rock. Rock and rock ends in a draw.")
+    elif((user_input == "scissors") & (computer_input == "scissors")):
+        print("The computer threw scissors. scissors and scissors ends in a draw.")
+    elif((user_input == "paper") & (computer_input == "paper")):
+        print("The computer threw paper. paper and paper ends in a draw.")
+    
+    elif((user_input == "rock") & (computer_input == "scissors")):
+        print("The computer threw scissors. rock and scissors ends in a ROCKIN victory for ya!")
+    elif((user_input == "paper") & (computer_input == "rock")):
+        print("The computer threw rock. The paper consumes the rock leading to a victory for you")
+    elif((user_input == "scissors") & (computer_input == "paper")):
+        print("The computer threw paper. Scissors slices the paper for victory for ya!")
+
+
+    elif((user_input == "scissors") & (computer_input == "rock")):
+        print("The computer threw rock. rock and scissors ends in a CRUSHING victory for the computer!")
+    elif((user_input == "paper") & (computer_input == "scissors")):
+        print("The computer threw scissors. paper and scissors ends in SLICIN victory for the CPU!")
+    elif((user_input == "rock") & (computer_input == "paper")):
+        print("The computer threw paper. rock and paper ends in a crumpling victory for the CPU!")
+
+rock = "rock"
+scissors = "scissors"
+paper = "paper"
+
+
+list = [rock, paper, scissors]
+        
+computer = random.choice(list)
+
+#user = input("Rock, Paper, Scissors, Shoot!: ")
+
+
+#count = 3
+#index = 0
+
+#print(computer)
+
+#LOOP
+
+prompt=input("Would you like to play Rock, Paper, Scissors? 'Y' for yes, anything else no:  ").upper()
+while prompt == 'Y':
+    prompt = input("Rock, Paper, Scissors, Shoot!: ").lower()
+    rockPaperScissors(prompt, computer)
+    computer = random.choice(list)
+    print()
+    prompt= input("Would you like to play another round? Y/N:" ).upper()
+
